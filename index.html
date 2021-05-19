@@ -11,16 +11,24 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,500&display=swap"
       rel="stylesheet"
     />
+    
     <link rel="stylesheet" href="/css files/css/all.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- for offline jquery -->
+    <!-- <script src="jquery-3.6.0.js"></script> -->
     <title>Manag3x Landing Page</title>
   </head>
   <body>
-    <!-- Navbar Section -->
-    <nav>
-      <div>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
         <!-- Logo -->
       </div>
-      <div class="nav-second-section">
+      <nav>
+      
         <ul>
           <li>
             <a href="#">Services</a>
@@ -32,11 +40,19 @@
             <a href="#">FAQS</a>
           </li>
           <li>
-            <button>Get Started</button>
-          </li>
+            <a class="button">Get Started</a>
+          </li> 
         </ul>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fa fa-bars"></i>
+  
       </div>
-    </nav>
+
+    </header>
+
+    
+    
     <!-- First Section -->
     <div class="first-section">
       <div class="first-section-left">
@@ -56,7 +72,7 @@
     <!-- Second Section -->
     <div class="second-section">
       <div class="our-services">
-        <h2>Our Servives</h2>
+        <h2>Our Services</h2>
       </div>
       <div class="second-section-parts">
         <div class="second-section-left">
@@ -108,7 +124,7 @@
           <button><b>Learn More</b></button>
         </div>
       </div>
-      <div>
+      <div class="forth-section-right">
         <img src="images/logistics/rafiki.jpg" alt="" />
       </div>
     </div>
@@ -142,7 +158,7 @@
         </div>
         <form>
           <input type="email" placeholder="Email" id="email" /> <br />
-          <input type="text" placeholder="Message" id="message" /> <br />
+          <textarea name="message" id="message" placeholder="message"></textarea><br />
           <button type="button">Submit</button>
         </form>
       </div>
@@ -198,14 +214,33 @@
           Stay up to date with the latest business trends sent straight to your
           mail.
         </p>
-        <input type="email" placeholder="Email" />
-        <button type="button"><b>Subscribe</b></button>
+        <div class="subscribe-box">
+          <input type="email" placeholder="Email" />
+          <button type="button"><b>Subscribe</b></button>
+        </div>
       </div>
     </footer>
     <!-- Below footer section -->
-    <div>
-      <div class="fa-twitter"></div>
-      <div></div>
+    <div class="below-footer">
+      <div class="social-box">
+        <a href="#"><i class="fa fs-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+
+      </div>
+      
+      <p>
+        &copy;,
+        All Rights Reserved. 2021
+      </p>
+      
+
     </div>
+
+
+
+
+    <script src="script.js"></script>
+
   </body>
 </html>
