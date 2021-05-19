@@ -272,6 +272,7 @@ header nav ul li a:hover {
   margin-top: 16px;
   font-weight: 500;
   font-size: 1.8rem;
+  outline: none;
 }
 
  /* Contact us section */
@@ -399,14 +400,17 @@ footer > div > ul > li > a {
 
  .below-footer {
    width: 100%;
-   padding: 20px 40px;
+   padding: 20px 100px;
    display: grid;
    grid-template-columns: 1fr auto 1fr;
  }
 
 /* Media Queries */
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
   img {
     width: 100%;
   }
@@ -452,7 +456,7 @@ footer > div > ul > li > a {
   .second-section-parts,
   .contact-us-section {
     grid-template-columns: 100%;
-    padding: 100px;
+    padding: 100px 50px;
   }
 
   .first-section-left,
@@ -485,11 +489,12 @@ footer > div > ul > li > a {
     text-align: center;
   }
 
-
+   
+  .faq-section {
+    padding: 50px;
+  }
   .faq-section > h2 {
-    font-size: 40px;
-    line-height: 55px;
-    font-weight: 700;
+    line-height: 40px;
     text-align: center;
   }
   .faq-select {
@@ -498,19 +503,20 @@ footer > div > ul > li > a {
   .faq-select > select {
     height: 50px;
   } 
+
+  .contact-us-left {
+    padding: 0;
+  }
   
   
   footer {
-    padding: 2em;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+    grid-template-columns: 100%;
     justify-items: center;
     gap: 20px;
     text-align: center;
   }
   
-   .footer-right {
-    grid-column: 1/4;
-  } 
   
 
   .below-footer {
