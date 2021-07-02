@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;;800&display=swap");
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.register {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.register_col {
+  flex: 0 0 50%;
+}
+
+.col1 {
+  flex: 0 0 50%;
+}
+.register_des {
+  background: linear-gradient(
+    141.44deg,
+    rgba(2, 20, 129, 0.81) -6.78%,
+    rgba(208, 14, 120, 0.5) 111.12%
+  );
+  clip-path: polygon(0 0, 58% 0%, 100% 100%, 0% 100%);
+  border-radius: 0 0rem 0rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.login_content {
+  color: #fff;
+}
+
+.login_content h1 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+.button_box button {
+  color: #021481;
+  width: 26.5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 900;
+  font-size: 2.6rem;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.button_box button:hover {
+  background: #021481;
+  color: #fff;
+}
+
+/* FORM ASPECT STYLE  */
+
+.col2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 46.9rem;
+}
+
+.form_title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.form_title h1 {
+  font-size: 3.6rem;
+}
+
+.form_title p {
+  font-size: 1.8rem;
+}
+.form_group {
+  margin: 3rem 0;
+}
+
+.form_group label {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  color: #3a3a3a;
+}
+
+.form_group input {
+  width: 100%;
+  outline: none;
+  /* height: 1.8rem; */
+  font-size: 1.8rem;
+  padding: 2rem 1rem;
+  border-radius: 0.31rem;
+
+  background: #f2f4fa;
+  border: 1px solid #021481;
+}
+
+.authButton {
+  width: 100%;
+  height: 5.6rem;
+  background: #021481;
+  border-radius: 10px;
+  border: none;
+  font-size: 2.4rem;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+.google_btn,
+.google_btn:active {
+  width: 100%;
+  height: 5.6rem;
+  background: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 2.4rem;
+  color: #ea4335;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.google_btn img {
+  width: 20px;
+}
+.google_btn span {
+  padding-left: 2rem;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 8px;
+  }
+  form {
+    width: 100%;
+    padding: 1rem;
+  }
+  .register {
+    width: 100%;
+    display: block;
+    background: linear-gradient(
+      141.44deg,
+      rgba(2, 20, 129, 0.81) -6.78%,
+      rgba(208, 14, 120, 0.5) 111.12%
+    );
+  }
+  .col1 {
+    display: none;
+  }
+  .col2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  .form_group input {
+    width: 100%;
+  }
+  .register_col {
+    flex: 0 0 100%;
+  }
+}
