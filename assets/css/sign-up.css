@@ -201,23 +201,39 @@ button {
   }
   .register {
     width: 100%;
-    display: block;
+    flex-direction: column-reverse;
     background: linear-gradient(
       141.44deg,
       rgba(2, 20, 129, 0.81) -6.78%,
       rgba(208, 14, 120, 0.5) 111.12%
     );
+    padding: 20px 10px;
   }
-  .col1 {
-    display: none;
+  .register_des {
+    clip-path: none;
+    background: none;
+    width: 100%;
+    
+    
+    
   }
-  .col2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
+
+  .login_content {
+    width: 100%;
+    padding: 2rem 1rem;
+    
   }
+
+  .login_content a {
+    text-decoration: none;
+  }
+
+  .login_content button{
+    display: block;
+    width: 100%;
+  }
+
+
   .form_group input {
     width: 100%;
   }
