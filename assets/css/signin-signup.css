@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    background: linear-gradient(141.44deg, 
+                rgba(2, 20, 129) -6.78%, 
+                rgba(208, 14, 120) 111.12%);
+    border-radius: 25px 25px 50px 50px;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: -50%;
+    transform: skew(20deg);
+    z-index: 4;
+    transition: all 1s ease-in-out;
+}
+
+.container::after {
+    content: '';
+    background: linear-gradient(36.56deg, 
+                rgba(208, 14, 120) -6.78%, 
+                rgba(2, 20, 129) 111.12%);
+    border-radius: 25px 25px 50px 50px;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    right: -150%;
+    transform: skew(-20deg);
+    z-index: 4;
+    transition: all 1s ease-in-out;
+}
+
+
+.forms-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.input-field .input-title {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+input {
+    background-color: rgb(243, 243, 243);
+    max-width: 400px;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 300px;
+    height: 40px;
+    background: rgb(0, 0, 163);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0px 5px 0px;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgb(0, 0, 80);
+    transform: translate(-1px, -1px);
+}
+
+.social-media {
+    width: 300px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: .3px 0.3px 5px -2px rgb(83, 83, 83);
+    background: white;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+.social-media:hover {
+    transform: translate(-1px, -1px);
+}
+
+.social-media i {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.social-media .google-login {
+    text-decoration: none;
+    color: #EA4335;
+}
+
+.signin-signup {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: all 1.2s ease-in-out;
+}
+
+.signup-signup {
+    position: absolute;
+    top: 50%;
+    left: -25%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: all 1.2s ease-in-out;
+}
+
+.side-container {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+}
+
+.panel {
+    width: max-content;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.left-container {
+    left: 50%;
+    transition: all 1.2s ease-in-out;
+}
+
+.right-container {
+    right: -200%;
+    transition: all 1.2s ease-in-out;
+}
+
+.panel h3 {
+    font-weight: 500;
+    line-height: 1;
+    font-size: 25px;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+    margin: 20px 0px;
+}
+
+.panel p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.panel .btn {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: rgb(0, 0, 163);
+    width: 200px;
+    transition: all 0.3s;
+}
+
+.panel .btn:hover {
+    color: rgb(2, 2, 77);
+}
+
+
+
+/* Animation */
+.container.enter-signup::before {
+    left: -150%;
+}
+
+.container.enter-signup::after {
+    right: -50%;
+}
+
+.container.enter-signup .left-container {
+    left: -50%;
+}
+
+.container.enter-signup .right-container {
+    right: -100%;
+}
+
+.container.enter-signup .signup-signup {
+    left: 25%;
+}
+
+.container.enter-signup .signin-signup {
+    left: 150%;
+}
+
+
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
