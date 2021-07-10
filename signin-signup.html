@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Back to JS practice</title>
-    <link rel="stylesheet" href="assets/css/signin-signup.css">
+    <link rel="stylesheet" href="signin-signup.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,17 +17,18 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="#" class="signin-form">
+                <form action="#" class="signin-form" onsubmit="return validateLogIn()">
                     <h3 class="form-title">Login to your account</h3>
-                    <section class="input-field">
+                    <div class="input-field">
                         <h4 class="input-title">E-mail</h4>
-                        <input type="email" placeholder="Enter your E-mail Address">
-                    </section>
-                    <section class="input-field">
+                        <input type="email" placeholder="Enter your E-mail Address" id="email">
+                    </div>
+                    <div class="input-field">
                         <h4 class="input-title">Password</h4>
-                        <input type="password" placeholder="Enter your password">
-                    </section>
-                    <input type="submit" class="btn solid" value="Log in">
+                        <a href="#">Forgot password?</a>
+                        <input type="password" placeholder="Enter your password" id="password">
+                    </div>
+                    <button type="submit" class="btn solid">Log in</button>
                     <div class="social-media">
                         <i class="fab fa-google fa-3x"></i>
                         <a href="#" class="google-login">Login with Google</a>
@@ -36,25 +37,26 @@
             </div>
 
             <div class="signup-signup">
-                <form action="#" class="signup-form">
+                <form action="#" class="signup-form" onsubmit="return validateSignUp()">
                     <h3 class="form-title">Create your account</h3>
                     <div class="input-field">
                         <h4 class="input-title">E-mail</h4>
-                        <input type="email" placeholder="Enter your E-mail Address">
+                        <input type="email" placeholder="Enter your E-mail Address" id="signup-email">
                     </div>
                     <div class="input-field">
                         <h4 class="input-title">Password</h4>
-                        <input type="password" placeholder="Enter your password">
+                        <input type="password" placeholder="Enter your password" id="signup-password">
                     </div>
                     <div class="input-field">
                         <h4 class="input-title">Confirm Password</h4>
-                        <input type="password" placeholder="Confirm your password">
+                        <input type="password" placeholder="Confirm your password" id="signup-confirm-password">
                     </div>
-                    <input type="submit" class="btn solid" value="Create your account">
+                    <button type="submit" class="btn solid">Create your account</button>
                     <div class="social-media">
                         <i class="fab fa-google fa-3x"></i>
                         <a href="#" class="google-login">Sign up with Google</a>
                     </div>
+                    <p>By signing up, you agree to our <a>Terms</a> and <a>Privacy Policy</a></p>
                 </form>
             </div>
         </div>
@@ -63,17 +65,17 @@
             <div class="panel left-container">
                 <h3>Don't have an account?</h3>
                 <p>Your awesome business definitely needs one. Sign up with just a click</p>
-                <button href="#" class="btn signup-link" id="signup-button">Sign Up</button>
+                <button class="btn signup-link" id="signup-button">Sign Up</button>
             </div>
 
             <div class="panel right-container">
                 <h3>Already have an account?</h3>
                 <p>Log in to have a look at how your business is faring?</p>
-                <button href="#" class="btn login-link" id="login-button">Log in</button>
+                <button class="btn login-link" id="login-button">Log in</button>
             </div>
         </div>
     </div>
 
-    <script src="assets/js/signin-signup.js"></script>
+    <script type="text/javascript" src="signin-signup.js"></script>
 </body>
 </html>

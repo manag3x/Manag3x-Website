@@ -7,6 +7,7 @@
 body, input {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    font-size: 14px;
 }
 
 .container {
@@ -47,13 +48,41 @@ body, input {
     transition: all 1s ease-in-out;
 }
 
-
 .forms-container {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
+}
+
+.signin-signup {
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    left: 50%;
+    z-index: 5;
+    transition: all 1.2s ease-in-out;
+}
+
+.signup-signup {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: all 1.2s ease-in-out;
+}
+
+.signup-signup > form > p {
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+    margin: 5px 0px 0px 0px;
+}
+
+.signup-signup > form > p > a {
+    font-size: 12px;
+    color: black;
+    margin: 5px 0px 0px 0px;
 }
 
 form {
@@ -76,6 +105,15 @@ form {
     flex-direction: column;
     justify-content: center;
     padding: 10px 0px;
+    position: relative;
+}
+
+.input-field > a {
+    text-decoration: none;
+    font-size: 11px;
+    position: absolute;
+    top: 20%;
+    right: 2%;
 }
 
 .input-field .input-title {
@@ -98,7 +136,12 @@ input {
     border-radius: 5px;
 }
 
+input:focus {
+    border: solid rgb(208, 208, 208) 2px;
+}
+
 .btn {
+    font-family: 'Poppins', sans-serif;
     width: 300px;
     height: 40px;
     background: rgb(0, 0, 163);
@@ -109,13 +152,13 @@ input {
     font-size: 20px;
     font-weight: 600;
     margin: 10px 0px 5px 0px;
-    transition: all 0.8s;
+    transition: all 0.5s;
     cursor: pointer;
 }
 
 .btn:hover {
     background: rgb(0, 0, 80);
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
 }
 
 .social-media {
@@ -127,14 +170,15 @@ input {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    box-shadow: .3px 0.3px 5px -2px rgb(83, 83, 83);
+    box-shadow: .3px .3px 5px -2px rgb(83, 83, 83);
     background: white;
+    font-size: 12px;
     cursor: pointer;
-    transition: all 0.7s;
+    transition: all 0.5s;
 }
 
 .social-media:hover {
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
 }
 
 .social-media i {
@@ -145,24 +189,6 @@ input {
 .social-media .google-login {
     text-decoration: none;
     color: #EA4335;
-}
-
-.signin-signup {
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    transition: all 1.2s ease-in-out;
-}
-
-.signup-signup {
-    position: absolute;
-    top: 50%;
-    left: -25%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    transition: all 1.2s ease-in-out;
 }
 
 .side-container {
@@ -227,7 +253,6 @@ input {
 }
 
 
-
 /* Animation */
 .container.enter-signup::before {
     left: -150%;
@@ -242,7 +267,7 @@ input {
 }
 
 .container.enter-signup .right-container {
-    right: -100%;
+    right: -110%;
 }
 
 .container.enter-signup .signup-signup {
@@ -254,10 +279,162 @@ input {
 }
 
 
+/* The Google Logo */
 .fa-google {
     background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 991px)
+{
+    .container::before {
+        content: '';
+        background: linear-gradient(36.56deg, 
+                    rgba(208, 14, 120) -6.78%, 
+                    rgba(2, 20, 129) 111.12%);
+        border-radius: 20px;
+        height: 80vh;
+        width: 100vw;
+        position: absolute;
+        left: 98%;
+        transform: skew(0deg);
+        transform: translate(0%, 10%);
+        z-index: 8;
+        transition: none;
+    }
+    
+    .container::after {
+        content: '';
+        background: linear-gradient(141.44deg, 
+                    rgba(2, 20, 129) -6.78%, 
+                    rgba(208, 14, 120) 111.12%);
+        border-radius: 20px;
+        height: 80vh;
+        width: 100vw;
+        position: absolute;
+        right: 98%;
+        transform: skew(0deg);
+        transform: translate(0%, 10%);
+        z-index: 8;
+        transition: none;
+    }
+    
+    .signin-signup {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .signup-signup {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -110%;
+        transform: translate(0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .side-container {
+        width: 100%;
+        height: 25%;
+        top: 75%;
+        align-items: flex-start;
+    }
+    
+    .left-container {
+        transform: translate(35%);
+        transition: all 1.2s ease-in-out;
+    }
+    
+    .right-container {
+        transform: translate(280%, 500%);
+        transition: all 1.2s ease-in-out;
+    }
+
+    .panel {
+        position: unset;
+        display: block;
+        width: max-content;
+        color: black;
+        margin-top: 5px;
+    }
+
+    .panel h3 {
+        font-weight: normal;
+        color: rgb(95, 95, 95);
+        font-size: 1rem;
+        letter-spacing: normal;
+        word-spacing: normal;
+        margin: 0px;
+    }
+    
+    .panel p {
+        display: none;
+    }
+    
+    .panel .btn {
+        display: inline;
+        background-color: white;
+        border-radius: 0px;
+        color: black;
+        text-decoration: underline;
+        width: max-content;
+        height: max-content;
+        font-size: 1rem;
+        position: absolute;
+        top: -120%;
+        left: 105%;
+        transition: none;
+    }
+
+    .panel .btn:hover {
+        transform: translate(0%, 0%);
+    }
+
+    .container.enter-signup::before {
+        left: 98%;
+        transform: translate(0%, 10%);
+    }
+    
+    .container.enter-signup::after {
+        right: 98%;
+        transform: translate(0%, 10%);
+    }
+
+    .container.enter-signup .left-container {
+        transform: translate(-300%);
+    }
+    
+    .container.enter-signup .right-container {
+        transform: translate(-60%, 500%);
+    }
+    
+    .container.enter-signup .signup-signup {
+        left: 0%;
+    }
+    
+    .container.enter-signup .signin-signup {
+        left: 150%;
+    }
+
 }
