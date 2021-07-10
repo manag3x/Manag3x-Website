@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $(".year").text(new Date().getFullYear());
     let isHamburger = true;
     $('.menu-toggle').click(function(){
 
