@@ -224,7 +224,7 @@ header nav ul li a:hover {
 
 
 .forth-section {
-  background-color: #f2f6ff;
+  background-color: rgba(242, 246, 255, 0.4);
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 150px 100px 150px 100px ;;  
@@ -361,7 +361,7 @@ footer > div {
 }
 footer > div > h5 {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 2rem;
   line-height: 39px;
 }
 footer > div > ul > li {
@@ -418,10 +418,14 @@ footer > div > ul > li > a {
 
 @media screen and (max-width: 900px) {
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
   img {
     width: 100%;
+  }
+
+  h2 {
+    line-height: 40px;
   }
   header {
     padding: 20px 50px;
@@ -543,110 +547,3 @@ footer > div > ul > li > a {
   }
 
 }
-/* 
-@media screen and (min-width: 786px) and (max-width: 992px) {
-  body {
-    font-family: Montserrat;
-    width: 100%;
-    height: 100%;
-     text-align: center;
-  }
-  .first-section,
-  .third-section,
-  .forth-section {
-    padding: 14em;
-  }
-  .second-section {
-    padding: 7em;
-  }
-  .second-section-parts {
-    padding: 7em;
-  }
-  .first-section-left,
-  .second-section-left,
-  .third-section-left,
-  .forth-section-left {
-    margin: auto;
-    grid-row: 2 / 2;
-  }
-  h2 {
-    font-size: 50px;
-    line-height: 50px;
-    text-align: center;
-  }
-  .first-section-left > p,
-  .second-section-left > p,
-  .third-section-left > p,
-  .forth-section-left > p {
-    padding: 0.5em 0em;
-    font-size: 1.2em;
-    text-align: center;
-    line-height: 24px;
-  }
-  .first-section-button,
-  .second-section-button,
-  .third-section-button,
-  .forth-section-button {
-    text-align: center;
-  }
-  .first-section-right,
-  .second-section-right,
-  .third-section-right,
-  .forth-section-right {
-    grid-row: 1 / 1;
-  }
-  .first-section-right > img,
-  .second-section-right > img,
-  .third-section-right > img,
-  .forth-section-right > img {
-    margin-top: 6em;
-    width: 20em;
-  }
-  .our-services {
-    position: absolute;
-  }
-  .faq-section > h2 {
-    font-size: 40px;
-    line-height: 55px;
-    font-weight: 700;
-    text-align: center;
-  }
-  .faq-select > select {
-    width: 500px;
-    height: 50px;
-    margin-top: 0.8em;
-    font-weight: 600;
-    font-size: 20px;
-  }
-  .contact-us-section {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 4em;
-  }
-  .contact-us-left {
-    margin: 7em;
-    grid-row: 2 / 2;
-  }
-  .contact-us-right > img {
-    margin-top: 6em;
-    width: 30em;
-  }
-  footer {
-  } 
-  .footer-left {
-    grid-row: 1/4;
-  }
-  .footer-middle {
-    grid-row: 2/4;
-  }
-  .footer-second-middle {
-    grid-row: 3/4;
-  }
-  .footer-right {
-    grid-row: 4/4;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1200) {
-}
-@media screen and (min-width: 1200px) {
-} */
