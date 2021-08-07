@@ -16,7 +16,6 @@ body, input {
     background-color: white;
     min-height: 100vh;
     overflow: hidden;
-    border: 1px solid green;
 }
 
 .container::before, .container-otp::before {
@@ -62,7 +61,6 @@ body, input {
     left: 50%;
     z-index: 5;
     transition: all 1.2s ease-in-out;
-    border: 1px solid blue;
 }
 
 .signup-signup,.number-otp {
@@ -73,7 +71,6 @@ body, input {
     transform: translate(-50%, -50%);
     z-index: 5;
     transition: all 1.2s ease-in-out;
-    border: 1px solid pink;
 }
 
 .signup-signup > form > p, .number-otp > form > p{
@@ -93,7 +90,6 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px red solid;
 }
 
 .form-title {
@@ -110,7 +106,6 @@ form {
     justify-content: center;
     padding: 10px 0px;
     position: relative;
-    border: 1px solid green;
 }
 
 .form-field {
@@ -118,7 +113,6 @@ form {
     width: 100%;
     display: flex;
     padding: 10px 0px;
-    border: 1px solid green;
     
 
 }
@@ -220,7 +214,6 @@ button a {
     flex-direction: row;
     justify-content: center;
     position: absolute;
-    border: 1px solid black;
 }
 
 .panel {
@@ -234,13 +227,11 @@ button a {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
-    border: 1px solid yellowgreen;
 }
 
 .left-container, .left-container-otp {
     left: 50%;
     transition: all 1.2s ease-in-out;
-    border: 1px solid orange;
 }
 
 .right-container, .right-container-otp {
@@ -284,7 +275,6 @@ button a {
 #timer {
     color: black;
     padding-left: 10px;
-    border: 1px solid red;
 
 
 }
@@ -422,7 +412,6 @@ button a {
     }
     
     .left-container, .left-container-otp {
-        border: 1px solid green;
         transform: translate(50%);
         transition: all 1.2s ease-in-out;
     }
@@ -430,7 +419,6 @@ button a {
     .right-container, .right-container-otp {
         transform: translate(280%, 500%);
         transition: all 1.2s ease-in-out;
-        border: 1px solid red;
     }
 
     .panel {
