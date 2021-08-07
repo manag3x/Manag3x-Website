@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manag3x OTP Verification</title>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/signin-signup.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- for offline jquery -->
+    <!-- <script src="assets/js/jquery-3.6.0.js"></script> -->
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+          <img src="assets/images/logo.jpg" alt="">
+        </div>
+        <nav>
+        
+          <ul>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">FAQS</a>
+            </li>
+            <li>
+              <a href="signin-signup.html" class="button">Get Started</a>
+            </li> 
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <i class="fa fa-bars"></i>
+    
+        </div>
+  
+      </header>
+    
+    <div class="container-otp">
+        <div class="forms-container">
+
+            <!-- Sign In Form -->
+            <div class="email-otp">
+                <form action="otp-verification.html" class="" onsubmit="return validateLogIn()">
+                    <h3 class="form-title">OTP Verification</h3>
+                    <p>Just a few more step to set up your account</p>
+                    <div class="input-field">
+                        <h4 class="input-title">Enter your Email Address</h4>
+                        <input type="email" placeholder="Enter your E-mail Address" id="email">
+                    </div>
+                    
+                    <button type="submit" class="btn solid">Get OTP</button>
+                    <p class="form-field">Send to my <span class="clickable" id="no-otp-btn">Mobile Number</span></p>
+                </form>
+            </div>
+
+            <!-- Sign Up Form-->
+            <div class="number-otp">
+                <form action="otp-verification.html" class="" onsubmit="return validateSignUp()">
+                    <h3 class="form-title">OTP Verification</h3>
+                    <p>Just a few more step to set up your account</p>
+                    <div class="input-field">
+                        <h4 class="input-title">Enter your Mobile Number</h4>
+                        <input type="email" placeholder="Enter your E-mail Address" id="signup-email">
+                    </div>
+                    <button type="submit" class="btn solid">Get OTP</button>
+                    <p class="form-field">Send to my <span class="clickable" id="email-otp-btn">Email Address</span></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="side-container">
+
+            <!-- Side Bars -->
+            <div class="panel left-container-otp">
+                <h3>Already have an account?</h3>
+                
+                <button class="btn signup-link"><a href="signin-signup.html">Log in</a></button>
+            </div>
+
+            <div class="panel right-container-otp">
+                <h3>Already have an account?</h3>
+                
+                <button class="btn login-link"><a href="signin-signup.html">Log in</a></button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/otp.js"></script>
+</body>
+</html>
