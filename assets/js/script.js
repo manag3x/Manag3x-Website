@@ -13,8 +13,5 @@ $(document).ready(function(){
             $('.menu-toggle i').attr("class","fa fa-bars");
             isHamburger = true;
         }
-        
-        
     })
-}
-    )
+})
