@@ -10,7 +10,7 @@ body, input {
     font-size: 14px;
 }
 
-.container {
+.container,.container-otp {
     position: relative;
     width: 100%;
     background-color: white;
@@ -18,7 +18,7 @@ body, input {
     overflow: hidden;
 }
 
-.container::before {
+.container::before, .container-otp::before {
     content: '';
     background: linear-gradient(141.44deg, 
                 rgba(2, 20, 129) -6.78%, 
@@ -33,7 +33,7 @@ body, input {
     transition: all 1s ease-in-out;
 }
 
-.container::after {
+.container::after, .container-otp::after {
     content: '';
     background: linear-gradient(36.56deg, 
                 rgba(208, 14, 120) -6.78%, 
@@ -54,7 +54,7 @@ body, input {
     height: 100%;
 }
 
-.signin-signup {
+.signin-signup,.email-otp {
     position: absolute;
     width: 50%;
     top: 25%;
@@ -63,7 +63,7 @@ body, input {
     transition: all 1.2s ease-in-out;
 }
 
-.signup-signup {
+.signup-signup,.number-otp {
     position: absolute;
     width: 50%;
     top: 50%;
@@ -73,13 +73,13 @@ body, input {
     transition: all 1.2s ease-in-out;
 }
 
-.signup-signup > form > p {
+.signup-signup > form > p, .number-otp > form > p{
     font-size: 12px;
     color: rgb(128, 128, 128);
     margin: 5px 0px 0px 0px;
 }
 
-.signup-signup > form > p > a {
+.signup-signup > form > p > a , .number-otp > form > p > a {
     font-size: 12px;
     color: black;
     margin: 5px 0px 0px 0px;
@@ -106,6 +106,15 @@ form {
     justify-content: center;
     padding: 10px 0px;
     position: relative;
+}
+
+.form-field {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    padding: 10px 0px;
+    
+
 }
 
 .input-field > a {
@@ -140,9 +149,13 @@ input:focus {
     border: solid rgb(208, 208, 208) 2px;
 }
 
+button a {
+    text-decoration: none;
+}
 .btn {
     font-family: 'Poppins', sans-serif;
-    width: 300px;
+    max-width: 400px;
+    width: 100%;
     height: 40px;
     background: rgb(0, 0, 163);
     border: none;
@@ -162,7 +175,8 @@ input:focus {
 }
 
 .social-media {
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
     height: 40px;
     margin: 5px;
     display: flex;
@@ -215,12 +229,12 @@ input:focus {
     z-index: 5;
 }
 
-.left-container {
+.left-container, .left-container-otp {
     left: 50%;
     transition: all 1.2s ease-in-out;
 }
 
-.right-container {
+.right-container, .right-container-otp {
     right: -200%;
     transition: all 1.2s ease-in-out;
 }
@@ -244,7 +258,7 @@ input:focus {
     font-family: 'Poppins', sans-serif;
     background-color: white;
     color: rgb(0, 0, 163);
-    width: 200px;
+    width: 100%;
     transition: all 0.3s;
 }
 
@@ -252,29 +266,62 @@ input:focus {
     color: rgb(2, 2, 77);
 }
 
+.clickable, #timer {
+    cursor: pointer;
+    padding-left: 2px;
+    color: rgb(0, 0, 163);
+}
 
+#timer {
+    color: black;
+    padding-left: 10px;
+
+
+}
+
+.flex-s-b {
+    justify-content: space-between;
+}
+
+#request-otp {
+    margin-left: -110px;
+}
+
+
+.otp-input {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.otp-input input {
+    margin: 20px 10px;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+}
 /* Animation */
-.container.enter-signup::before {
+.container.enter-signup::before, .container-otp.enter-no-otp::before {
     left: -150%;
 }
 
-.container.enter-signup::after {
+.container.enter-signup::after, .container-otp.enter-no-otp::after {
     right: -50%;
 }
 
-.container.enter-signup .left-container {
+.container.enter-signup .left-container, .container-otp.enter-no-otp .left-container-otp{
     left: -50%;
 }
 
-.container.enter-signup .right-container {
+.container.enter-signup .right-container, .container-otp.enter-no-otp .right-container-otp {
     right: -110%;
 }
 
-.container.enter-signup .signup-signup {
+.container.enter-signup .signup-signup, .container-otp.enter-no-otp .number-otp  {
     left: 25%;
 }
 
-.container.enter-signup .signin-signup {
+.container.enter-signup .signin-signup, .container-otp.enter-no-otp .email-otp  {
     left: 150%;
 }
 
@@ -299,7 +346,7 @@ input:focus {
 /* Mobile Responsiveness */
 @media screen and (max-width: 991px)
 {
-    .container::before {
+    .container::before, .container-otp::before {
         content: '';
         background: linear-gradient(36.56deg, 
                     rgba(208, 14, 120) -6.78%, 
@@ -315,7 +362,7 @@ input:focus {
         transition: none;
     }
     
-    .container::after {
+    .container::after, .container-otp::after {
         content: '';
         background: linear-gradient(141.44deg, 
                     rgba(2, 20, 129) -6.78%, 
@@ -331,7 +378,7 @@ input:focus {
         transition: none;
     }
     
-    .signin-signup {
+    .signin-signup, .email-otp {
         width: 100%;
         height: 100%;
         top: 0;
@@ -342,7 +389,7 @@ input:focus {
         justify-content: center;
     }
     
-    .signup-signup {
+    .signup-signup, .number-otp {
         width: 100%;
         height: 100%;
         top: 0;
@@ -358,25 +405,31 @@ input:focus {
         width: 100%;
         height: 25%;
         top: 75%;
+        display: flex;
         align-items: flex-start;
+        justify-content: center ;
+
     }
     
-    .left-container {
-        transform: translate(35%);
+    .left-container, .left-container-otp {
+        transform: translate(50%);
         transition: all 1.2s ease-in-out;
     }
     
-    .right-container {
+    .right-container, .right-container-otp {
         transform: translate(280%, 500%);
         transition: all 1.2s ease-in-out;
     }
 
     .panel {
         position: unset;
-        display: block;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
         width: max-content;
         color: black;
         margin-top: 5px;
+        min-width: 300px;
     }
 
     .panel h3 {
@@ -394,46 +447,56 @@ input:focus {
     
     .panel .btn {
         display: inline;
-        background-color: white;
+        background-color: none;
+        width: auto;
         border-radius: 0px;
         color: black;
         text-decoration: underline;
-        width: max-content;
-        height: max-content;
+        /* width: max-content;
+        height: max-content; */
         font-size: 1rem;
-        position: absolute;
-        top: -120%;
-        left: 105%;
+        /* position: absolute; */
+        /* top: -120%;
+        left: 105%; */
         transition: none;
+        padding-left: 2px;
+    }
+
+    .otp-input input {
+        width: 50px;
+    }
+
+    #request-otp {
+        margin-left: 0px;
     }
 
     .panel .btn:hover {
         transform: translate(0%, 0%);
     }
 
-    .container.enter-signup::before {
+    .container.enter-signup::before, .container-otp.enter-no-otp::before {
         left: 98%;
         transform: translate(0%, 10%);
     }
     
-    .container.enter-signup::after {
+    .container.enter-signup::after, .container-otp.enter-no-otp::after {
         right: 98%;
         transform: translate(0%, 10%);
     }
 
-    .container.enter-signup .left-container {
+    .container.enter-signup .left-container , .container-otp.enter-no-otp .left-container-otp{
         transform: translate(-300%);
     }
     
-    .container.enter-signup .right-container {
-        transform: translate(-60%, 500%);
+    .container.enter-signup .right-container , .container-otp.enter-no-otp .right-container-otp{
+        transform: translate(-50%,100%);
     }
     
-    .container.enter-signup .signup-signup {
+    .container.enter-signup .signup-signup, .container-otp.enter-no-otp .number-otp {
         left: 0%;
     }
     
-    .container.enter-signup .signin-signup {
+    .container.enter-signup .signin-signup , .container-otp.enter-no-otp .email-otp {
         left: 150%;
     }
 

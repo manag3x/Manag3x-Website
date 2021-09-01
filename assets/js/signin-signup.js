@@ -2,7 +2,10 @@
 
 const login_btn = document.querySelector('#login-button'), 
 signup_btn = document.querySelector('#signup-button'), 
-container = document.querySelector('.container');
+container = document.querySelector('.container')
+signin_form = document.forms[0]
+signup_form = document.forms[1];;
+
 
 signup_btn.addEventListener('click', ()=>{
     container.classList.add('enter-signup');
@@ -11,6 +14,7 @@ signup_btn.addEventListener('click', ()=>{
 login_btn.addEventListener('click', ()=>{
     container.classList.remove('enter-signup');
 });
+
 
 
 
@@ -48,11 +52,29 @@ function validateSignUp() {
     } else if (signupUserPassword.value.trim() == "") {
         signupUserPassword.style.border = "2px solid red";
         return false;
-    } else if (confirmPassword.value.trim() == "") {
+    } else if (confirmPassword.value.trim() != confirmPassword.value.trim()) {
         confirmPassword.style.border = "2px solid red";
+        return false;
+    } else if (signupUserPassword.value.trim() == "") {
+        signupUserPassword.style.border = "2px solid red";
         return false;
     } else {
         return true;
     }
     
 }
+
+
+signin_form.addEventListener("submit", function(event){
+    if (!validateLogIn()) {
+        event.preventDefault();
+    }
+
+});
+
+signup_form.addEventListener("submit", function(event){
+    if (!validateSignUp()) {
+        event.preventDefault();
+    }
+
+});

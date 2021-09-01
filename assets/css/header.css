@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Montserrat;
+    width: 100%;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .button {
+    font-weight: 700;
+    background-color: #0214b1;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    color: #333
+  }
+  
+  button {
+      
+    cursor: pointer;
+  }
+
+  /* header section */
+ 
+header {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    width: 100%;
+    background: #fff;
+  
+  }
+  
+  header .logo {
+    float: left;
+    width: 30%;
+    height: 50px;
+  
+  } 
+  
+  header .logo img {
+    max-width: 50%;
+    max-height: 100%;
+    margin: auto 0;
+  }
+  
+  header nav {
+    float: right;
+  }
+  
+  header nav ul {
+    display: flex;
+  }
+  
+  header nav ul li {
+    list-style: none;
+  }
+  
+  header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px 0 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  header nav ul li a:hover {
+    font-weight: 700;
+  }
+  
+  .menu-toggle {
+    float: right;
+    line-height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  
+
+
+  @media screen and (max-width: 900px) {
+    /* html {
+        font-size: 10px;
+      } */
+      img {
+        width: 100%;
+      }
+
+      header {
+        padding: 20px 50px;
+    
+      }
+    
+      header .logo {
+        width: 50%;
+      } 
+    
+      header .logo img {
+        max-width: 70%;
+        height: 100%;
+      }
+    
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+    
+      header nav {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        top: 90px;
+        left: -100%;
+        transition: 0.5s;
+      } 
+    
+      header nav.active {
+        left: 0;
+      }
+    
+      header nav  ul {
+        display: block;
+        text-align: center;
+      }
+    
+    
+  }
