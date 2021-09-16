@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Manag3x Business Management Service">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="https://kit.fontawesome.com/47fe4690c7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Manag3x | Inventory Management</title>
+</head>
+<body>
+        <nav class="navigation">
+            <ul>
+                <li class="company-title">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                        <span class="title"><h3>Manag3x</h3></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="title">Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-warehouse"></i></span>
+                        <span class="title">Inventory</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-shipping-fast"></i></span>
+                        <span class="title">Logistics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="sign-out">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    <main>
+        <header class="header-section">
+            <div class="toggle" onclick="toggleMenu();"><i class="fas fa-bars"></i></div>
+            <div class="welcome">
+                <h3 class="dashboard-name">Inventory</h3>
+                <div>
+                    <h4>Hi Tactes Stores, welcome back!</h4>
+                    <h4>Your inventory changed. See updates on your Dashboard below.</h4>
+                </div>
+            </div>
+            <form action="" >
+                <div class="search">
+                    <input type="text" name="" id="search-input" placeholder="Search Inventory...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <div class="notification"><i class="far fa-bell"></i></div>
+            <div class="user"></div>
+        </header>
+
+        <section class="main-section">
+            <section class="dashboard-section">
+                <section class="stock-preview">
+                    <div class="in-stock stock">
+                        <div class="stock-in icon"><img src="./28365.jpg" alt="stock in" height="80px"></div>
+                        <div class="stock-in details">
+                            <h4 class="stock-in description">In Stock</h4>
+                            <p class="stock-in total-price">5892</p>
+                            <p class="stock-in month">This month</p>
+                        </div>
+                    </div>
+                    <div class="out-stock stock">
+                        <div class="stock-out icon"><img src="./28365.jpg" alt="stock out" height="80px"></div>
+                        <div class="stock-out details">
+                            <h4 class="stock-out description">Stock out</h4>
+                            <p class="stock-out total-price">9182</p>
+                            <p class="stock-out month">This month</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="product-preview">
+                    <div class="productHeader">
+                        <h2>Recent Products</h2>
+                        <div>
+                            <a href="#" class="addProduct"> <i class="fas fa-plus"></i>Add Product</a>
+                            <a href="#" class="allProduct">View All</a>
+                        </div>
+                    </div>
+                    <div class="product-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Product Name</td>
+                                    <td>Price</td>
+                                    <td>Quantity</td>
+                                    <td>Category</td>
+                                    <td>Last updated</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="productImg"></span>Nike X346</td>
+                                    <td>$4292</td>
+                                    <td>35</td>
+                                    <td>Shoes</td>
+                                    <td>23/02/2021 <a href="#">more</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="productImg"></span>Apollo H2IG3</td>
+                                    <td>$42922</td>
+                                    <td>13</td>
+                                    <td>Antique</td>
+                                    <td>12/08/2021 <a href="#">more</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="productImg"></span>Camon X716</td>
+                                    <td>$929</td>
+                                    <td>82</td>
+                                    <td>Wristwatch</td>
+                                    <td>05/09/2021 <a href="#">more</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="productImg"></span>Camon X716</td>
+                                    <td>$929</td>
+                                    <td>82</td>
+                                    <td>Wristwatch</td>
+                                    <td>05/09/2021 <a href="#">more</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+
+            <section class="update-section"> 
+                <section class="top-selling">
+                    <header>Low Status reminder</header>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Product</td>
+                                <td>Quantity</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nike X346</td>
+                                <td>4 left</td>
+                            </tr>
+                            <tr>
+                                <td>Apollo H2IG3</td>
+                                <td>2 left</td>
+                            </tr>
+                            <tr>
+                                <td>Camon X716</td>
+                                <td>5 left</td>
+                            </tr>
+                            <tr>
+                                <td>Rexxon</td>
+                                <td>0 left</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="low-status">
+                    <section class="top-selling">
+                        <header>Top selling products</header>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Product</td>
+                                    <td>Quantity</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rexxon</td>
+                                    <td>0 left</td>
+                                </tr>
+                                <tr>
+                                    <td>Camon X716</td>
+                                    <td>5 left</td>
+                                </tr>
+                                <tr>
+                                    <td>Apollo H2IG3</td>
+                                    <td>2 left</td>
+                                </tr>
+                                <tr>
+                                    <td>Nike X346</td>
+                                    <td>4 left</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </section>
+            </section>
+        </section>
+    </main>
+
+
+    <script>
+        function toggleMenu() {
+            let toggle = document.querySelector(".toggle"),
+            navigation = document.querySelector('.navigation'),
+            main = document.querySelector("main");
+
+            toggle.classList.toggle("active");
+            navigation.classList.toggle("active");
+            main.classList.toggle("active")
+        }
+    </script>
+</body>
+</html>
