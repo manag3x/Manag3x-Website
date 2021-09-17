@@ -1,4 +1,4 @@
-<?php use server\core\Config; $config = new Config();?>
+<?php $config = new server\core\Config(); ?>
 <!DOCTYPE html>
 <html lang="en">
     <base href="<?php echo $config::$site->base ?>" id="app-root-base">
@@ -25,52 +25,47 @@
     <meta itemprop="image" content="<?php echo $config::$site->logo ?>">
     <link rel="icon" type="image/x-icon" href="<?php echo $config::$site->icon ?? ""; ?>">
     
-    <link href="<?php echo $config::$res->assets->css ?>loader.css" rel="stylesheet" type="text/css" />
-    <script src="<?php echo $config::$res->assets->js ?>loader.js"></script>
-    
+    <!-- <link href="<?php // echo $config::$assets->css ?>loader.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <script src="<?php //echo $config::$assets->js ?>loader.js"></script> -->
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link href="<?php echo $config::$res->resource ?>bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo $config::$res->assets->css ?>plugins.css" rel="stylesheet" type="text/css" />
-    <script src="<?php echo $config::$res->plugin ?>sweetalerts/promise-polyfill.js"></script>
-    <link href="<?php echo $config::$res->plugin ?>sweetalerts/sweetalert2.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo $config::$res->plugin ?>sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo $config::$res->assets->css ?>components/custom-sweetalert.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $config::$res->plugin ?>font-icons/fontawesome/css/fontawesome.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="<?php // echo $config::$res->plugin
-    ?>table/datatable/custom_dt_html5.css"> -->
-    <link rel="stylesheet" type="text/css" href="<?php echo $config::$res->plugin ?>table/datatable/dt-global_style.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $config::$res->plugin ?>table/datatable/datatables.css">
-<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo $config::$res->plugin ?><!--table/datatable/custom_dt_multiple_tables.css">-->
-    <link href="<?php echo $config::$res->assets->css ?>components/custom-modal.css" rel="stylesheet" type="text/css">
+    
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="<?php echo $config::$assets->plugin ?>bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="<?php echo $config::$assets->plugin ?>sweetalerts/promise-polyfill.js"></script>
+    <link href="<?php echo $config::$assets->plugin ?>sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $config::$assets->plugin ?>fonts/fontawesome/css/fontawesome.min.css">
+    <link href="<?php echo $config::$assets->css ?>structure.css" rel="stylesheet" type="text/css" class="structure" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-    <link rel="stylesheet" type="text/css" href="<?php echo $config::$res->plugin ?>animate/animate.css">
-    <!-- <link href="<?php // echo $config::$res->custom->css ?>multi.css" rel="stylesheet" type="text/css" /> -->
-    <link href="<?php echo $config::$res->custom->css ?>protocoll.css" rel="stylesheet" type="text/css" />
+    
     <style>
-        .layout-px-spacing {
-            min-height: calc(100vh - 166px)!important;
-        }
         .form-form .form-form-wrap form .division {
             text-align: center;
             font-size: 13px;
             margin: 19px 0 20px 0 !important;
         }
+        .navbar .navbar-item.navbar-dropdown {
+            margin-left: auto;
+        }
+        .layout-px-spacing {
+            min-height: calc(100vh - 145px)!important;
+        }
     </style>
 
 <?php
-    foreach ($css ?? [] as $css): ?><link href="<?php echo $config::$res->assets->css . $css ?>.css"
-                                     rel="stylesheet"><?php endforeach;
-    foreach ($custom_css ?? [] as $css): ?><link href="<?php echo $config::$res->custom->css . $css ?>.css"
-                                     rel="stylesheet"><?php endforeach;
-    foreach ($plugin_css ?? [] as $css): ?><link href="<?php echo $config::$res->plugin . $css ?>.css"
-                                            rel="stylesheet"><?php endforeach;
+    foreach ($css ?? [] as $css): ?><link href="<?php echo $config::$assets->css . $css ?>.css" rel="stylesheet">
+    <?php endforeach;
+    foreach ($custom_css ?? [] as $css): ?><link href="<?php echo $config::$assets->custom->css . $css ?>.css"
+    rel="stylesheet"><?php endforeach;
+    foreach ($plugin_css ?? [] as $css): ?><link href="<?php echo $config::$assets->plugin . $css ?>.css"
+    rel="stylesheet"><?php endforeach;
 ?>
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 </head>
-<body class="<?php echo $body_class ?>" <?php echo $body_attr ?>>
+<body class="<?php echo $body_class ?> sidebar-noneoverflow starterkit" <?php echo $body_attr ?>>
 <?php 
     if(isset($page_type) and ($page_type == "auth" or $page_type == "error")) return;
     require_once "vars.inc"; 

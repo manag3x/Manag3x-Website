@@ -1,0 +1,7 @@
+[17-Sep-2021 09:22:57 Europe/Berlin] Uncaught Exception: 'Error' with Message: Access to undeclared static property server\core\Config::$res
+Stack trace: #0 C:\xampp\htdocs\Manag3x-Website\server\inc\head.inc(71): require_once()
+#1 C:\xampp\htdocs\Manag3x-Website\server\core\View.php(120): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Manag3x-Website\inventory\views.php(21): server\core\View::render('dashboard', Array)
+#3 C:\xampp\htdocs\Manag3x-Website\inventory\index.php(8): view('dashboard')
+#4 {main}
+Thrown in: C:\xampp\htdocs\Manag3x-Website\server\inc\vars.inc on line 4

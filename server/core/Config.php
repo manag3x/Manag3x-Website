@@ -11,7 +11,7 @@ final class Config{
     public static string $DIR;
     public static string $USER;
     public static object $site;
-    public static object $res;
+    public static object $assets;
     public static object $user;
     public static object $mvc;
     public static object $db;
@@ -27,9 +27,9 @@ final class Config{
         }elseif(self::$ENV == "prod"){
             self::$db = (object)[
                 "host" => "localhost",
-                "user" => "u989813977_backlink",
+                "user" => "managex",
                 "pass" => "Backlink2021",
-                "db" => "u989813977_backlink",
+                "db" => "managex",
             ];
         }
         else{
@@ -37,7 +37,7 @@ final class Config{
                 "host" => "localhost",
                 "user" => "root",
                 "pass" => "",
-                "db" => "backlink",
+                "db" => "managex",
             ];
         }
         return self::$db;
@@ -72,42 +72,23 @@ final class Config{
             "ctrl" => $base . "{$usr}/ctrl?",
         ]);
 
-        self::$mvc = Helper::object([
-            "ctrl" => [
-                "admin"         =>     $dir . "server" . $slash . "controller" . $slash . "admin" . $slash,
-                "client"        =>     $dir . "server" . $slash . "controller" . $slash . "client" . $slash,
-            ],
-           
-            "view" => [
-                "admin"         =>     $dir . "server" . $slash . "view" . $slash . "admin" . $slash,
-                "client"        =>     $dir . "server" . $slash . "view"  . $slash . "client" . $slash,
-            ],
-            "ctrl"              =>     $dir . "server" . $slash . "controller" . $slash,
-            "inc"               =>     $dir . "server" . $slash . "inc" . $slash,
-            "view"              =>     $dir . "server" . $slash . "view" . $slash,
-            "model"             =>     $dir . "server" . $slash . "model" . $slash,
-        ]);
-
-        self::$res = Helper::object([
+        self::$assets = Helper::object([
             "upload"            =>     $base . "uploads/",
-            "resource"          =>     $base . "resource/",
-            "sass"              =>     $base . "resource/sass/",
-            "plugin"            =>     $base . "resource/plugins/",
+            // "sass"              =>     $base . "assets/sass/",
+            "plugin"            =>     $base . "assets/plugins/",
+            "js"                =>     $base . "assets/js/",
+            "css"               =>     $base . "assets/css/",
+            "img"               =>     $base . "assets/images/",
             "custom"            => [
-                "js"            =>     $base . "resource/custom/js/",
-                "css"           =>     $base . "resource/custom/css/",
-                "img"           =>     $base . "resource/custom/img/",
-                "dimg"          =>     $dir . "resource/custom/img/",
+                "js"            =>     $base . "assets/custom/js/",
+                "css"           =>     $base . "assets/custom/css/",
+                "img"           =>     $base . "assets/custom/img/",
+                "dimg"          =>     $dir . "assets/custom/img/",
             ],
             "uploads"           => [
                 "root"          =>     $dir . "uploads/",
                 "client"        =>     $dir . "uploads/client/",
-                "publisher"     =>     $dir . "uploads/publisher/",
-            ],
-            "assets"            => [
-                "js"            =>     $base . "resource/assets/js/",
-                "css"           =>     $base . "resource/assets/css/",
-                "img"           =>     $base . "resource/assets/img/",
+                "admin"         =>     $dir . "uploads/admin/",
             ],
         ]);
 
@@ -115,15 +96,15 @@ final class Config{
             "base"              => $base,
             "base_no_proto"     => $base,
             "name"              => "Manag3x",
-            "name_full"         => "Manag3x | Your Global Access to Backlinks",
+            "name_full"         => "Manag3x | Your Business Management Software",
             "author"            => "Manag3x Team",
-            "logo"              => self::$res->custom->img . "logo.png",
-            "white_logo"        => self::$res->custom->img . "logo-white.png",
-            "icon"              => self::$res->custom->img . "logo.png",
+            "logo"              => self::$assets->img . "logo.png",
+            "white_logo"        => self::$assets->img . "logo.png",
+            "icon"              => self::$assets->img . "favicon.png",
             "pry_color"         => "",
             "sec_color"         => "",
             "email"             => "info@".self::$WEBSITE,
-            "admin_email"       => "lekanvgbg@gmail.com",
+            "admin_email"       => "info@".self::$WEBSITE,
             "support"           => "support@".self::$WEBSITE,
             "copy"              => "Copyright &copy; Manag3x " . date("Y") . ", All Rights Reserved",
             "tel"               => "01234567890",
