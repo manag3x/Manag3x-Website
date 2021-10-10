@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
     :root {
         --maxWidth: 1280px;
         --white: #fff;
-        --black: #000000 //This is just a sample template
+        --black: #000000 //This is just a sample template, the other color variables can be specified as so
         --lightBlue: #;
         --midBlue: #;
         --darkBlue: #;
