@@ -4,10 +4,9 @@ export const GlobalStyle = createGlobalStyle`
     :root {
         --maxWidth: 1280px;
         --white: #fff;
-        --black: #000000 //This is just a sample template
-        --lightBlue: #;
-        --midBlue: #;
-        --darkBlue: #;
+        --grey: #dcdcdc;
+        --lightBlue: #6495ED;
+        --darkBlue: #041E42;
         --fontVeryLarge: 2.5rem;
         --fontLarge: 1.5rem;
         --fontMid: 1.2rem;
@@ -20,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        background: var(--grey);
         margin: 0;
         padding: 0;
 

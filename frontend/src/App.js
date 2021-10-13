@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Sidebar from "./components/Sidebar/Sidebar";
+import { GlobalStyle } from "./GlobalStyle";
+import Overview from "./pages/Overview";
+import Finance from "./pages/Finance/Finance";
+import Income from "./pages/Finance/Income";
+import Statement from "./pages/Finance/Statement";
+import Inventory from "./pages/Inventory";
+import Settings from "./pages/Settings";
+import Logistics from "./pages/Logistics";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Sidebar />
+        <Switch>
+          <Route path='/overview' exact component={Overview} />
+          <Route path='/finance' exact component={Finance} />
+          <Route path='/finance/income' exact component={Income} />
+          <Route path='/finance/statement' exact component={Statement} />
+          <Route path='/inventory' exact component={Inventory} />
+          <Route path='/logistics' exact component={Logistics} />
+          <Route path='/settings' exact component={Settings} />
+
+        </Switch>      
+        <GlobalStyle />
+    </Router>
   );
 }
 
