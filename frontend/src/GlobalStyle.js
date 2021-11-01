@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
         --grey: #dcdcdc;
         --lightBlue: #6495ED;
         --darkBlue: #041E42;
+        --black: #000000 //This is just a sample template, the other color variables can be specified as so
+        --lightBlue: #;
+        --midBlue: #;
+        --darkBlue: #;
         --fontVeryLarge: 2.5rem;
         --fontLarge: 1.5rem;
         --fontMid: 1.2rem;
